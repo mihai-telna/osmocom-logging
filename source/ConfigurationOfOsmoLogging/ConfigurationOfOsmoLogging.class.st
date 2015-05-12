@@ -114,7 +114,11 @@ ConfigurationOfOsmoLogging >> baseline01: spec [
 
 	spec for: #'common' do: [
 		spec blessing: #'baseline'.
-		spec package: #OsmoLogging. ].
+		spec 
+			package: #OsmoLogging;
+			package: 'OsmoSyslog' with: [
+				spec requires: #(#OsmoLogging ). ].
+		spec group: 'default' with: #(#OsmoLogging 'OsmoSyslog' ). ].
 
 ]
 

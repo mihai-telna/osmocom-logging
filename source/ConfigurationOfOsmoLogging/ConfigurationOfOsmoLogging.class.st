@@ -114,6 +114,7 @@ ConfigurationOfOsmoLogging >> baseline01: spec [
 
 	spec for: #'common' do: [
 		spec blessing: #'baseline'.
+		spec repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/'.
 		spec 
 			package: #OsmoLogging;
 			package: 'OsmoSyslog' with: [

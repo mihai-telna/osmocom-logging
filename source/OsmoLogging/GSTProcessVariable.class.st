@@ -1,9 +1,6 @@
 Class {
 	#name : #GSTProcessVariable,
 	#superclass : #ProcessLocalVariable,
-	#instVars : [
-		'dict'
-	],
 	#category : #'OsmoLogging-Pharo'
 }
 
@@ -15,13 +12,14 @@ GSTProcessVariable class >> key: aKey [
 
 { #category : #creation }
 GSTProcessVariable >> dict [
-	^dict ifNil: [dict := Dictionary new]
+	^self value ifNil: [self value: Dictionary new. self value]
 
 ]
 
 { #category : #key }
 GSTProcessVariable >> key: aKey [
-	^self dict at: aKey
-	    ifAbsent: [self dict at: aKey put: GSTProcessVariableHolder new]
+	| dict |
+	dict := self dict.
+	^dict at: aKey ifAbsentPut: [GSTProcessVariableHolder new]
 
 ]

@@ -15,6 +15,6 @@ GSTProcessVariableHolder >> value [
 
 { #category : #set }
 GSTProcessVariableHolder >> value: aValue [
-	val := val
+	val := aValue
 
 ]

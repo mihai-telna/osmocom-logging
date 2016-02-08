@@ -151,3 +151,26 @@ ConfigurationOfOsmoLogging >> project [
 		project loadType: #linear. "change to #atomic if desired"
 		project ]
 ]
+
+{ #category : #'symbolic versions' }
+ConfigurationOfOsmoLogging >> stable: spec [
+	<symbolicVersion: #'stable'>
+
+	spec for: #'common' version: '1'.
+
+]
+
+{ #category : #versions }
+ConfigurationOfOsmoLogging >> version1: spec [
+	<version: '1' imports: #('0.1-baseline' )>
+
+	spec for: #'common' do: [
+		spec blessing: #'stable'.
+		spec description: 'version 1'.
+		spec author: 'HolgerHansPeterFreyther'.
+		spec timestamp: '2/8/2016 11:36'.
+		spec 
+			package: #OsmoLogging with: 'OsmoLogging-HolgerHansPeterFreyther.9';
+			package: 'OsmoSyslog' with: 'OsmoSyslog-HolgerHansPeterFreyther.6'. ].
+
+]

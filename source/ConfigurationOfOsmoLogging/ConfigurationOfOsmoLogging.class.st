@@ -123,6 +123,21 @@ ConfigurationOfOsmoLogging >> baseline01: spec [
 
 ]
 
+{ #category : #baselines }
+ConfigurationOfOsmoLogging >> baseline02: spec [
+	<version: '0.2-baseline'>
+
+	spec for: #'common' do: [
+		spec blessing: #'baseline'.
+		spec repository: 'http://smalltalkhub.com/mc/osmocom/Logging/main/'.
+		spec 
+			package: #OsmoLogging;
+			package: 'OsmoSyslog' with: [
+				spec requires: #(#OsmoLogging ). ].
+		spec group: 'default' with: #(#OsmoLogging 'OsmoSyslog' ). ].
+
+]
+
 { #category : #accessing }
 ConfigurationOfOsmoLogging >> customProjectAttributes [
 	 "Edit to return a collection of any custom attributes e.g. for conditional loading: Array with: #'Condition1' with: #'Condition2.
@@ -135,7 +150,7 @@ ConfigurationOfOsmoLogging >> customProjectAttributes [
 ConfigurationOfOsmoLogging >> development: spec [
 	<symbolicVersion: #'development'>
 
-	spec for: #'common' version: '0.1-baseline'.
+	spec for: #'common' version: '0.2-baseline'.
 
 ]
 

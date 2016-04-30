@@ -12,7 +12,12 @@ GSTProcessVariable class >> key: aKey [
 
 { #category : #creation }
 GSTProcessVariable >> dict [
-	^self value ifNil: [self value: Dictionary new. self value]
+	^self value ifNil: [ | dict |
+		"Do not assume that self value: dict. self value. will return the value we had.
+		Either because of a bug in process scheduling... but let us just be safe."
+		dict := Dictionary new.
+		self value: dict.
+		dict]
 
 ]
 

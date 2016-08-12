@@ -47,6 +47,11 @@ LogTargetSyslog class >> c_syslog: prio format: fmt prefix: prefix text: text [
 
 ]
 
+{ #category : #uffi }
+LogTargetSyslog class >> ffiLibraryName [
+	^LibC
+]
+
 { #category : #'as yet unclassified' }
 LogTargetSyslog class >> logLevelMap [
 	^LogMap ifNil: 

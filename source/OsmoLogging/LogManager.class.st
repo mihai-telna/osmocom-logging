@@ -34,6 +34,7 @@ LogManager >> areas [
 { #category : #'as yet unclassified' }
 LogManager >> context: aString value: aValue [
 	| key |
+	"Deprecated.. use the class based approach"
 	key := Array with: 'LogArea' with: aString.
 	(GSTProcessVariable key: key) value: aValue
 

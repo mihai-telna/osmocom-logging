@@ -11,6 +11,7 @@ Object >> formatForLogging [
 
 { #category : #'*OsmoLogging-Core' }
 Object >> logDataContext: aData area: anArea [
+	"Don't use this.. Use the LogDataPayload subclass"
 	self logManager context: 'data' value: aData
 
 ]

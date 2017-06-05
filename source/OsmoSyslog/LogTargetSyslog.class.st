@@ -74,11 +74,20 @@ LogTargetSyslog class >> openlog: anIdentity option: aOption facility: aFacility
 	"openlog(3) will simply store the pointer. So we need to make sure
 	that the string does stay around"
 
-	Identity := anIdentity asNBExternalString.
+	Identity := self toExternalString: anIdentity.
 	self c_closelog.
 	self c_openlog: Identity opt: aOption facility: aFacility.
 	^self new
 
+]
+
+{ #category : #'as yet unclassified' }
+LogTargetSyslog class >> toExternalString: aString [
+	Smalltalk at: #NBExternalAddressType ifPresent: [:val |
+		^val fromString: aString].
+	Smalltalk at: #ExternalAddress ifPresent: [:val |
+		^val fromString: aString].
+	^self error: 'No way to make a permanent external string'
 ]
 
 { #category : #'as yet unclassified' }

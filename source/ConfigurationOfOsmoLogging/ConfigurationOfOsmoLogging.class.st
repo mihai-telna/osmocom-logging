@@ -246,6 +246,6 @@ ConfigurationOfOsmoLogging >> version5: spec [
 		spec timestamp: '06/05/2017 18:24'.
 		spec 
 			package: #OsmoLogging with: 'OsmoLogging-HolgerHansPeterFreyther.11';
-			package: 'OsmoSyslog' with: 'OsmoSyslog-HolgerHansPeterFreyther.8'. ].
+			package: 'OsmoSyslog' with: 'OsmoSyslog-HolgerHansPeterFreyther.9'. ].
 
 ]

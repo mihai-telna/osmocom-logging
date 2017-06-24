@@ -83,7 +83,7 @@ LogTargetSyslog class >> openlog: anIdentity option: aOption facility: aFacility
 
 { #category : #'as yet unclassified' }
 LogTargetSyslog class >> toExternalString: aString [
-	Smalltalk at: #NBExternalAddressType ifPresent: [:val |
+	Smalltalk at: #NBExternalAddress ifPresent: [:val |
 		^val fromString: aString].
 	Smalltalk at: #ExternalAddress ifPresent: [:val |
 		^val fromString: aString].

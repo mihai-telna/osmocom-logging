@@ -171,7 +171,7 @@ ConfigurationOfOsmoLogging >> project [
 ConfigurationOfOsmoLogging >> stable: spec [
 	<symbolicVersion: #'stable'>
 
-	spec for: #'common' version: '5'.
+	spec for: #'common' version: '6'.
 
 ]
 
@@ -246,6 +246,21 @@ ConfigurationOfOsmoLogging >> version5: spec [
 		spec timestamp: '06/05/2017 18:24'.
 		spec 
 			package: #OsmoLogging with: 'OsmoLogging-HolgerHansPeterFreyther.11';
+			package: 'OsmoSyslog' with: 'OsmoSyslog-HolgerHansPeterFreyther.9'. ].
+
+]
+
+{ #category : #'as yet unclassified' }
+ConfigurationOfOsmoLogging >> version6: spec [
+	<version: '6' imports: #('0.2-baseline' )>
+
+	spec for: #'common' do: [
+		spec blessing: #'stable'.
+		spec description: 'version 5'.
+		spec author: 'HolgerHansPeterFreyther'.
+		spec timestamp: '10/21/2019 21:53'.
+		spec 
+			package: #OsmoLogging with: 'OsmoLogging-HolgerHansPeterFreyther.12';
 			package: 'OsmoSyslog' with: 'OsmoSyslog-HolgerHansPeterFreyther.9'. ].
 
 ]

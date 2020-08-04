@@ -1,0 +1,13 @@
+SmalltalkCISpec {
+  #loading : [
+      SCIMetacelloLoadSpec {
+          #baseline : 'OsmoLogging',
+          #directory : 'source',
+          #platforms : [ #pharo ]
+      }
+  ],
+  #testing : {
+      #failOnZeroTests : false
+  }
+}
+

@@ -64,11 +64,6 @@ LogTargetSyslog class >> logLevelMap [
 
 ]
 
-{ #category : #nativeboost }
-LogTargetSyslog class >> nbLibraryNameOrHandle [
-	^NativeBoost CLibrary
-]
-
 { #category : #'as yet unclassified' }
 LogTargetSyslog class >> openlog: anIdentity option: aOption facility: aFacility [
 	"openlog(3) will simply store the pointer. So we need to make sure
@@ -83,11 +78,7 @@ LogTargetSyslog class >> openlog: anIdentity option: aOption facility: aFacility
 
 { #category : #'as yet unclassified' }
 LogTargetSyslog class >> toExternalString: aString [
-	Smalltalk at: #NBExternalAddress ifPresent: [:val |
-		^val fromString: aString].
-	Smalltalk at: #ExternalAddress ifPresent: [:val |
-		^val fromString: aString].
-	^self error: 'No way to make a permanent external string'
+	^ExternalAddress fromString: aString
 ]
 
 { #category : #'as yet unclassified' }

@@ -18,9 +18,104 @@ Class {
 }
 
 { #category : #'c-facility' }
+LogTargetSyslog class >> LOG_AUTH [
+	^4<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_AUTHPRIV [
+	^10<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_CRON [
+	^9<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_DAEMON [
+	^3<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_FTP [
+	^11<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_KERN [
+	^0<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL0 [
+	^ 16 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL1 [
+	^ 17 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL2 [
+	^ 18 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL3 [
+	^ 19 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL4 [
+	^ 20 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL5 [
+	^ 21 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL6 [
+	^ 22 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LOCAL7 [
+	^ 23 << 3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_LPR [
+	^6<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_MAIL [
+	^2<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_NEWS [
+	^7<<3
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_SYSLOG [
+	^5<<3
+]
+
+{ #category : #'c-facility' }
 LogTargetSyslog class >> LOG_USER [
 	^8
 
+]
+
+{ #category : #'c-facility' }
+LogTargetSyslog class >> LOG_UUCP [
+	^8<<3
 ]
 
 { #category : #'c-interface' }
